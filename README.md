@@ -1,1 +1,1 @@
-this is the reade for my e-portofio github page
+this is the page for my e-portofio github page
