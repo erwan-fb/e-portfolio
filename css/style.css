@@ -1,0 +1,182 @@
+:root {
+  --background-color: rgb(28, 28, 28);
+  --text-color: #eeeeee;
+  --primary-color: rgb(44, 44, 44);
+  --secondary-color: rgb(66, 66, 66);
+  --ternary-color: rgb(100, 100, 100);
+  --shell-color: rgb(0, 176, 21);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+window-frame {
+  position: absolute;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-family: monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#main_wrapper {
+  display: flex;
+  flex: 1;
+}
+
+#main_space {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+#shell_window {
+  font-size: large;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  /*border: solid 1px var(--ternary-color);
+  background-color: var(--primary-color);*/
+  border-radius: 5px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#main_space {
+  flex: 1;
+  height: 100vh;
+}
+
+#upper_title {
+  color: var(--text-color);
+  text-decoration: underline var(--shell-color) 2px;
+}
+
+#write_space {
+  color: var(--shell-color);
+  margin: 1vh;
+  height: 67vh;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 150%;
+  scrollbar-width: thin;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-right: 1vh;
+}
+
+#screen_overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(46, 250, 104)0%, rgba(0, 43, 14, 1) 85%);
+  opacity: 0.25;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.stripe {
+  background-color: green;
+  width: 100%;
+}
+
+#image_window {
+  right: -10vw;
+  top: -10vh;
+  display: none;
+}
+
+#cv {
+  left: -7.5vw;
+  bottom: 10vh;
+}
+
+#cv a {
+  margin: 10px;
+  border: solid 2px var(--text-color);
+  border-radius: 10px;
+  color: var(--text-color);
+  padding: 2px;
+}
+
+#elevator_pitch {
+  left: -15vw;
+  top: 10vh;
+}
+
+#title_window {
+  top: -10vh;
+  color: var(--text-color);
+  font-size: xx-large;
+  text-align: center;
+  width: 100%;
+}
+
+#link_window {
+  bottom: 0px;
+  right: -10vw;
+}
+
+#link_project_window {
+  left: -16vw;
+  top: 20vh;
+  color: #6e6efb;
+}
+
+#gcc_logo {
+  right: -16vw;
+  top: 13vh;
+}
+
+#gcc_logo_img {
+  height: 15vh;
+  margin: 10px;
+}
+
+#climbing_photo_window {
+  top: 2vh;
+  left: -15vw;
+}
+
+#climbing_photo {
+  height: 30vh;
+}
+
+#ghidra_screenshot_window {
+  bottom: -10vh;
+  left: -10vw;
+}
+
+#vscode_screenshot_window {
+  top: 26vh;
+  right: -19vw;
+}
+
+#ghidra_screenshot,
+#vscode_screenshot {
+  height: 25vh;
+}
+
+#code_preview {
+  bottom: 11vh;
+  right: -19vw;
+}
+
+#code_preview_image {
+  height: 10vh;
+}
