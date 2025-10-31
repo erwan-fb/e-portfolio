@@ -392,7 +392,6 @@ async function terminal_career_development() {
   await pause(2);
   await write_shell("\nWhat else may interest you ?");
   print_menu();
-
 }
 
 terminal_home();
