@@ -388,7 +388,7 @@ async function terminal_career_development() {
   await pause(0.2);
   cv_window.style.display = "block";
   await pause(1);
-  await write_shell("And my linkedin can be found in the links window on the bottom right.\n");
+  await write_shell("\n\nAnd my linkedin can be found in the links window on the bottom right.\n");
   await pause(2);
   await write_shell("\nWhat else may interest you ?");
   print_menu();
