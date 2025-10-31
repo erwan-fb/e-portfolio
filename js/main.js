@@ -217,15 +217,6 @@ async function terminal_home(){
   await pause(2);
   await write_shell("\nNow, let me introduce myself in a short video.\n")
   await pause(0.1);
-  /*await write_shell("Loading cv link");
-  await pause(0.2);
-  await write_shell(".");
-  await pause(0.2);
-  await write_shell(".");
-  await pause(0.2);
-  await write_shell(".");
-  await pause(0.2);
-  cv_window.style.display = "block";*/
   await write_shell("\nLoading video");
   await pause(0.2);
   await write_shell(".");
