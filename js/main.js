@@ -373,9 +373,26 @@ async function terminal_career_development() {
   set_title("Career development");
   hide_all_windows();
   clear_console();
+  await write_shell("As of rigth now, I want to work in cybersecurity. ");
+  await pause(0.5);
+  await write_shell("But I'm not closed on the rest of the domains, like AI.\n");
+  await pause(1);
+  await write_shell("And here's my cv if you want to have a look at it.\n\n")
+  await write_shell("Loading cv link");
+  await pause(0.2);
+  await write_shell(".");
+  await pause(0.2);
+  await write_shell(".");
+  await pause(0.2);
+  await write_shell(".");
+  await pause(0.2);
+  cv_window.style.display = "block";
+  await pause(1);
+  await write_shell("And my linkedin can be found in the links window on the bottom right.\n");
+  await pause(2);
+  await write_shell("\nWhat else may interest you ?");
+  print_menu();
 
-
-  
 }
 
 terminal_home();
