@@ -184,3 +184,27 @@ h1 {
 #video_previwew_image {
   height: 18vh;
 }
+
+#ask_for_fast_forward {
+  bottom: -10vh;
+  left: 20vw;
+}
+
+#yes_btn,
+#no_btn {
+  color: var(--text-color);
+  margin: 10px;
+  border: solid 1px var(--text-color);
+  width: 50%;
+  text-align: center;
+}
+
+#yes_btn:hover {
+  color: green;
+  border-color: green;
+}
+
+#no_btn:hover {
+  color: red;
+  border-color: red;
+}

@@ -7,7 +7,6 @@
   <script src="js/main.js" defer="true"></script>
   <script src="js/overlay.js" defer="true"></script>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -62,6 +61,16 @@
           alt="Part of a crackme" id="ghidra_screenshot"></window-frame>
       <window-frame name="Part of my brainfuck debugger" id="vscode_screenshot_window"><img
           src="src/vscode_screenshot.png" alt="Part of my brainfuck debugger" id="vscode_screenshot"></window-frame>
+      <window-frame name="" id="ask_for_fast_forward">
+        <div style="display: flex; color: var(--text-color); margin: 3px;">Prevent fast forward when page already seen ?
+        </div>
+        <div style="display: flex; flex-direction: row;">
+          <div onclick="set_prevent_ff(true); fast_forward=false; this.parentElement.parentElement.style.display='none'"
+            id="yes_btn">Yes</div>
+          <div onclick="set_prevent_ff(false);  this.parentElement.parentElement.style.display='none'" id="no_btn">No
+          </div>
+        </div>
+      </window-frame>
     </window-frame>
   </div>
 

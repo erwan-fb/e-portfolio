@@ -16,6 +16,7 @@ const climbing_photo_window = document.getElementById("climbing_photo_window");
 const ghidra_screenshot_window = document.getElementById("ghidra_screenshot_window");
 const vscode_screenshot_window = document.getElementById("vscode_screenshot_window");
 const code_preview = document.getElementById("code_preview");
+const ask_for_ff_window = document.getElementById("ask_for_fast_forward");
 
 var cursor = document.getElementById("cursor");
 
@@ -25,20 +26,12 @@ let dark_theme = true;
 let menu_shown = true;
 let cursor_shown = true;
 let visited = null;
+let asked_ff = false;
+let prevent_ff = false;
 
 let writing = false;
 
 var timeoutID = -1;
-
-function update_theme(){
-  if (dark_theme){
-    //root.style.setProperty(`--theme-color-${index + 1}`, `${element}`);
-  } else {
-    //root.style.setProperty(`--theme-color-${index + 1}`, `${element}`);
-  }
-}
-
-update_theme();
 
 function remove_cursor(){
   if (document.querySelector("#cursor") !== null && write_space.childNodes.length) write_space.removeChild(write_space.childNodes[write_space.childNodes.length-1]);
@@ -138,6 +131,18 @@ function set_title(text){
   title_window.lastChild.lastChild.textContent = text;
 }
 
+function get_prevent_ff(){
+  let prevent_ff_val = window.localStorage.getItem("prevent_ff");
+  prevent_ff_val = prevent_ff_val ? prevent_ff_val : "0";
+  prevent_ff = prevent_ff_val == "1";
+}
+
+function set_prevent_ff(b){
+  if (b) window.localStorage.setItem("prevent_ff", "1");
+  else window.localStorage.setItem("prevent_ff", "0");
+  asked_ff = true;
+}
+
 function get_visited(index){
   visited = window.localStorage.getItem("visited_pages");
   visited = visited ? visited : "000000";
@@ -155,6 +160,7 @@ function reset_visited(){
 }
 
 function set_fast_forward(bool){
+  if (prevent_ff) return
   fast_forward = bool;
 }
 
@@ -184,6 +190,10 @@ function print_menu(){
   add_menu(" > Sports & Other Activities", "terminal_sport_other_activities")
   add_menu(" > Career Development", "terminal_career_development")
   write_space.scrollIntoView(cursor)
+
+  if (fast_forward && !asked_ff){
+    ask_for_ff_window.style.display = "block";
+  }
 }
 
 async function terminal_home(){
@@ -385,4 +395,5 @@ async function terminal_career_development() {
   print_menu();
 }
 
+get_prevent_ff();
 terminal_home();
