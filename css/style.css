@@ -115,7 +115,7 @@ h1 {
 }
 
 #elevator_pitch {
-  left: -15vw;
+  left: -19vw;
   top: 10vh;
 }
 
@@ -179,4 +179,8 @@ h1 {
 
 #code_preview_image {
   height: 10vh;
+}
+
+#video_previwew_image {
+  height: 18vh;
 }
